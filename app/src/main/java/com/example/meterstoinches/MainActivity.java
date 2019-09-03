@@ -36,12 +36,20 @@ public class MainActivity extends AppCompatActivity {
                 //conversion logic
                 double multiplier=39.37;
                 double result = 0.0;
-                
+
 //to convert text string from editText into double: use method for Double- .parseDouble--
 //it takes string as a parameter - but need to get that string with help of getText method and (in case there are numbers)-
 //need to convert toString the text entered by the user..
 //then the Double method works with the returned String:
                 double meterValue = Double.parseDouble(enterMeters.getText().toString());
+
+                result= meterValue*multiplier;
+
+                //to display:
+                resultTextView.setText(Double.toString(result)+ " inches");//can't put "result" itself,because it's double type-
+                //need to convert double -toString.
+
+
             }
         });
     }

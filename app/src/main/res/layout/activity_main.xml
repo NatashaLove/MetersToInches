@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B2C405"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/convertButtonID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="58dp"
+        android:background="#AADFF7"
         android:fontFamily="casual"
-        android:text="Convert"
+        android:text="@string/button"
+        android:textColor="#083D38"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editMetersTextID"
         app:layout_constraintHorizontal_bias="0.498"
@@ -24,14 +28,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/hint"
         android:inputType="textPersonName"
-        android:text="Enter in Meters:"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.019" />
+        app:layout_constraintVertical_bias="0.019"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -44,15 +49,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/meterstoin" />
+        app:srcCompat="@drawable/meterstoin"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/resultID"
-        android:layout_width="148dp"
-        android:layout_height="57dp"
+        android:layout_width="369dp"
+        android:layout_height="55dp"
+        android:background="#EBE5B2"
         android:fontFamily="casual"
-        android:text="Result in inches"
+        android:text="@string/result"
         android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
