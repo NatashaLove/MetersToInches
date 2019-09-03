@@ -27,16 +27,16 @@
         android:id="@+id/editMetersTextID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/hint"
-        android:inputType="textPersonName"
+        android:inputType="number|numberDecimal"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.019"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <ImageView
         android:id="@+id/imageView"

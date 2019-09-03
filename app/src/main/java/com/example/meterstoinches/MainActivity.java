@@ -46,8 +46,17 @@ public class MainActivity extends AppCompatActivity {
                 result= meterValue*multiplier;
 
                 //to display:
+                /*
+                1.
                 resultTextView.setText(Double.toString(result)+ " inches");//can't put "result" itself,because it's double type-
                 //need to convert double -toString.
+
+                2. variant below is better- method String.format - it's shorter and helps to reduce the amount of decimals:
+
+                 */
+                //parameter "%.2f" - syntax from c++ - tells to the method to convert the "result" to 2 decimal points
+                //and return String
+                resultTextView.setText(String.format("%.2f", result)+" inches");
 
 
             }
