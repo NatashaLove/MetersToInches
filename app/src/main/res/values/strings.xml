@@ -4,4 +4,5 @@
     <string name="hint">Enter in Meters</string>
     <string name="result">Result in inches</string>
     <string name="todo">TODO</string>
+    <string name="error_message">Please enter a valid number!</string>
 </resources>

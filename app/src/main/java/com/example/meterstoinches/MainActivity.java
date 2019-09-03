@@ -2,6 +2,7 @@ package com.example.meterstoinches;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,15 +38,23 @@ public class MainActivity extends AppCompatActivity {
                 double multiplier=39.37;
                 double result = 0.0;
 
-//to convert text string from editText into double: use method for Double- .parseDouble--
+//using .equals - method, because enterMeters is an object, can't use ==:
+                //also MUST convert toString! otherwise won't see empty "" string! and won't show error, but close app!
+                if (enterMeters.getText().toString().equals("")){
+
+                    resultTextView.setText(R.string.error_message);
+                    resultTextView.setTextColor(Color.RED);
+                }else{
+
+                    //to convert text string from editText into double: use method for Double- .parseDouble--
 //it takes string as a parameter - but need to get that string with help of getText method and (in case there are numbers)-
 //need to convert toString the text entered by the user..
 //then the Double method works with the returned String:
-                double meterValue = Double.parseDouble(enterMeters.getText().toString());
+                    double meterValue = Double.parseDouble(enterMeters.getText().toString());
 
-                result= meterValue*multiplier;
+                    result= meterValue*multiplier;
 
-                //to display:
+                    //to display:
                 /*
                 1.
                 resultTextView.setText(Double.toString(result)+ " inches");//can't put "result" itself,because it's double type-
@@ -54,9 +63,13 @@ public class MainActivity extends AppCompatActivity {
                 2. variant below is better- method String.format - it's shorter and helps to reduce the amount of decimals:
 
                  */
-                //parameter "%.2f" - syntax from c++ - tells to the method to convert the "result" to 2 decimal points
-                //and return String
-                resultTextView.setText(String.format("%.2f", result)+" inches");
+                    //parameter "%.2f" - syntax from c++ - tells to the method to convert the "result" to 2 decimal points
+                    //and return String
+                    resultTextView.setTextColor(Color.rgb(33,150,243));
+                    resultTextView.setText(String.format("%.2f", result)+" inches");
+                }
+
+
 
 
             }
