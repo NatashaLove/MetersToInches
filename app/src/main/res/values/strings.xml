@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">MetersToInches</string>
     <string name="button">Convert to inches</string>
+    <string name="button2">Convert to meters</string>
     <string name="hint">Enter in Meters</string>
-    <string name="result">Result in inches</string>
+    <string name="hint2">Enter in Inches</string>
+    <string name="result">Result</string>
     <string name="todo">TODO</string>
     <string name="error_message">Please enter a valid number!</string>
 </resources>
